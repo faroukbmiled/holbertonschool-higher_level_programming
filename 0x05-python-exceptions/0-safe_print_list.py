@@ -7,7 +7,6 @@ def safe_print_list(my_list=[], x=0):
             l += 1
         print()
         return x
-    except IndexError:
+    except IndexError as IE:
         print()
         return index
-    return index
