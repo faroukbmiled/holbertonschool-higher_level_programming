@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """class Square
-random doc
-"""
+random doc"""
+
+
 class Square:
     """class Square
-    random doc
-    """
+    random doc"""
     pass
