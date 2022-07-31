@@ -5,23 +5,24 @@
 class Square:
     """square class"""
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Initialize"""
         self.__size = size
+        self.position = position
 
     @property
     def size(self):
         """ value of size"""
         return self.__size
-    
+
     @property
     def position(self):
-        """getting position"""
+        """position"""
         return self.__position
 
     @size.setter
     def size(self, value):
-        """ set the value of size"""
+        """set size"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -46,10 +47,12 @@ class Square:
 
     def my_print(self):
         """printing"""
-        if self.__size == 0:
-            print('')
+        if self.size > 0:
+            if self.position[1] > 0:
+                print("\n" * self.position[1], end="")
+            for i in range(self.size):
+                if self.position[0] > 0:
+                    print(" " * self.position[0], end="")
+                print("#" * self.size)
         else:
-            for i in range(self.__size):
-                for a in range(self.__size):
-                    print("#", end="")
-                print('')
+            print(end="\n")
