@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const n = process.argv
-if (!parseInt(n[2])) {
+const arg = process.argv
+if (!parseInt(arg[2])) {
   console.log('Not a number');
 } else {
-  console.log('My number: ' + n[2]);
+  console.log('My number: ' + arg[2]);
 }
