@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const arg = process.argv
+const arg = process.argv;
 if (!parseInt(arg[2])) {
   console.log('Not a number');
 } else {
