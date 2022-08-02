@@ -9,8 +9,8 @@ module.exports = class Square extends Rectangle {
     if (!c) {
       c = 'X';
     }
-      for (let x = 0; x < this.height; x++) {
-        console.log(Array(this.height + 1).join(c));
+    for (let x = 0; x < this.height; x++) {
+      console.log(Array(this.height + 1).join(c));
     }
   }
 };
