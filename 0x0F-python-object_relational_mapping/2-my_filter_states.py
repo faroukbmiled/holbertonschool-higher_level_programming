@@ -10,10 +10,10 @@ if __name__ == "__main__":
                             password=argv[2],
                             database=argv[3])
     cursor = sqldb.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{}' \
-                   ORDER BY id ASC".format(argv[4]))
+    cursor.execute("SELECT * FROM states WHERE BINARY name = '{}'"
+                   .format(argv[4]))
     row = cursor.fetchall()
     for i in row:
-            print(i)
+        print(i)
     cursor.close()
     sqldb.close()
