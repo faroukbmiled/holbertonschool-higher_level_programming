@@ -10,7 +10,7 @@ if __name__ == "__main__":
                             password=argv[2],
                             database=argv[3])
     cursor = sqldb.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
     row = cursor.fetchall()
     for i in row:
         print(i)
