@@ -13,5 +13,5 @@ if __name__ == '__main__':
     session = Session(engine)
     for row in session.query(State).order_by(State.id.asc()).all():
         if 'a' in row.name:
-             print(f'{row.id}: {row.name}')
+            print(f'{row.id}: {row.name}')
     session.close()
