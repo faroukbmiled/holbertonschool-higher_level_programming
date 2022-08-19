@@ -10,9 +10,9 @@ if __name__ == '__main__':
         q = ""
     reqpost = post("http://0.0.0.0:5000/search_user", {'q': q})
     try:
-        response = reqpost.json()
-        if response:
-            print('[{}] {}'.format(response.get('id'), response.get('name')))
+        if reqpost.json():
+            print('[{}] {}'.format(reqpost.json().get('id'),
+                                   reqpost.json().get('name')))
         else:
             print('No result')
     except ValueError as error:
